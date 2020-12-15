@@ -27,4 +27,4 @@ docker run -it -p 8000:80 --mount source=krakenData,target=/app/database --mount
 
 echo "The system will reboot in 10 seconds to finish the installation."
 sleep 10
-echo "sudo reboot"
+sudo reboot
