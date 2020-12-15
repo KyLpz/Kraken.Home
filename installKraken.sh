@@ -7,7 +7,7 @@ echo "Get update"
 sudo apt-get update
 
 
-dockerState = $(docker -v)
+dockerState=$(docker -v)
 echo 'Docker status:  $dockerState'
 if [isDocker == 0];
 
