@@ -7,10 +7,9 @@ echo "Get update"
 sudo apt-get update
 
 
-state=`docker version`
+state=`docker -v`
 echo "Docker status:  $state"
 if [isDocker == 0];
-
 then
     echo "Install Docker"
     curl -fsSL https://get.docker.com -o get-docker.sh
