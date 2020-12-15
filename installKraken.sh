@@ -9,18 +9,13 @@ sudo apt-get update
 
 state=`docker -v`
 echo "Docker status:  $state"
-if [isDocker == 0];
-then
-    echo "Install Docker"
-    curl -fsSL https://get.docker.com -o get-docker.sh
-    sudo sh get-docker.sh
-    sudo usermod -aG docker pi
-    docker version
-    docker info
-else
-    echo "Docker is already installed."
-    echo "Docker installation was skipped"
-fi
+echo "Install Docker"
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker pi
+docker version
+docker info
+ 
 echo "Configuration of serial port"
 raspi-config nonint do_serial 1
 
