@@ -6,9 +6,11 @@ echo "Install Kraken.Charge"
 echo "Get update"
 sudo apt-get update
 
+
 dockerState = $(docker -v)
 echo 'Docker status:  $dockerState'
 if [isDocker == 0];
+
 then
     echo "Install Docker"
     curl -fsSL https://get.docker.com -o get-docker.sh
