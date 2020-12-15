@@ -7,7 +7,7 @@ echo "Get update"
 sudo apt-get update
 
 dockerState = docker -v 
-echo dockerState
+echo 'Docker status:  $dockerState'
 if [isDocker == 0];
 then
     echo "Install Docker"
